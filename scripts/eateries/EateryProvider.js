@@ -10,7 +10,7 @@ export const renderEateries = async() => {
 
 
     let html = `<h2>Eateries</h2>
-                <select id="paints">
+                <select id="eateries_dropdown">
                 <option value="0">Yum Yum</option>`
 
     const divStringArray = eateries.map((eat) => {
