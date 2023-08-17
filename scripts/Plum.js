@@ -1,4 +1,11 @@
+import { renderEateries } from "./eateries/EateryProvider.js";
+
+
+
 export const renderHTML = async () => {
+    const eateriesHTML = await renderEateries()
+
+
   return `
     <header class="header">
         <img src="" class=""/>
@@ -6,6 +13,9 @@ export const renderHTML = async () => {
     </header>
 
     <article class="choices">
+    <div class="eateries_html">
+    ${eateriesHTML}
+    </div>
     </article>
 
     <section>
