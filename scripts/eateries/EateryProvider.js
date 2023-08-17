@@ -1,8 +1,4 @@
-
-
-
-
-
+import { setEateryChoice } from "../TransientState.js"
 
 export const renderEateries = async() => {
     const response = await fetch("http://holidayroad.nss.team/eateries")
@@ -21,3 +17,11 @@ export const renderEateries = async() => {
     html += `</select>`
     return html
 }
+
+const handleEateryChoice = (choice) => {
+    if (choice.target.id === "eateries_dropdown") {
+        setEateryChoice(parseInt(choice.target.value))
+    }
+  }
+  
+  document.addEventListener("change", handleEateryChoice)
