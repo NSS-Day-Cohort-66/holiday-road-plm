@@ -30,15 +30,12 @@ export const renderHTML = async () => {
     </article>
 
      <article class="Weather">Weather</article>
-<<<<<<< HEAD
      ${weatherHTML}
      <article class="preview">Itinerary Preview</article>
-=======
      <div>
         <article class="preview">Itinerary Preview</article>
         ${detailsButtonHTML}
         ${saveButtonHTML}
->>>>>>> main
      <article class="savedItinerary">Saved Itinerary</article>
     </section>
     `;
