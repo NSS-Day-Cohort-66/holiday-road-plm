@@ -21,7 +21,7 @@ export const renderHTML = async () => {
 
     <section>
      <article class="Weather">Weather</article>
-     <article class="preview">Preview</article>
+     <article class="preview">Itinerary Preview</article>
      <article class="savedItinerary">Saved Itinerary</article>
     </section>
     `;
