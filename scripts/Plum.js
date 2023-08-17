@@ -1,4 +1,8 @@
+import { renderAttractions } from "./attractions/AttractionProvider.js";
+
 export const renderHTML = async () => {
+  const attractionsHTML = await renderAttractions();
+
   return `
     <header class="header">
         <img src="" class=""/>
@@ -6,6 +10,7 @@ export const renderHTML = async () => {
     </header>
 
     <article class="choices">
+    ${attractionsHTML}
     </article>
 
     <section>
