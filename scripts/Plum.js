@@ -1,13 +1,15 @@
-
 import { renderParks } from "./parks/ParkProvider.js";
 import { renderAttractions } from "./attractions/AttractionProvider.js";
 import { renderEateries } from "./eateries/EateryProvider.js";
+import { detailsSideButton } from "./DetailsButton.js";
+import { SaveButton } from "./SaveButton.js";
 
 export const renderHTML = async () => {
-  const parksHTML = await renderParks()
+  const parksHTML = await renderParks();
   const attractionsHTML = await renderAttractions();
-  const eateriesHTML = await renderEateries()
-
+  const eateriesHTML = await renderEateries();
+  const detailsButtonHTML = detailsSideButton();
+  const saveButtonHTML = SaveButton();
 
   return `
     <header class="header">
@@ -26,7 +28,10 @@ export const renderHTML = async () => {
     </article>
 
      <article class="Weather">Weather</article>
-     <article class="preview">Itinerary Preview</article>
+     <div>
+        <article class="preview">Itinerary Preview</article>
+        ${detailsButtonHTML}
+        ${saveButtonHTML}
      <article class="savedItinerary">Saved Itinerary</article>
     </section>
     `;
