@@ -2,12 +2,13 @@
 import { renderParks } from "./parks/ParkProvider.js";
 import { renderAttractions } from "./attractions/AttractionProvider.js";
 import { renderEateries } from "./eateries/EateryProvider.js";
+import { renderWeather } from "./weather/WeatherProvider.js";
 
 export const renderHTML = async () => {
   const parksHTML = await renderParks()
   const attractionsHTML = await renderAttractions();
   const eateriesHTML = await renderEateries()
-
+  const weatherHTML = await renderWeather()
 
   return `
     <header class="header">
@@ -26,6 +27,7 @@ export const renderHTML = async () => {
     </article>
 
      <article class="Weather">Weather</article>
+     ${weatherHTML}
      <article class="preview">Itinerary Preview</article>
      <article class="savedItinerary">Saved Itinerary</article>
     </section>
