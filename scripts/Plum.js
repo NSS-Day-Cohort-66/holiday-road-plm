@@ -3,6 +3,7 @@ import { renderAttractions } from "./attractions/AttractionProvider.js";
 import { renderEateries } from "./eateries/EateryProvider.js";
 import { detailsSideButton } from "./DetailsButton.js";
 import { SaveButton } from "./SaveButton.js";
+import { renderWeather } from "./weather/WeatherProvider.js";
 
 export const renderHTML = async () => {
   const parksHTML = await renderParks();
@@ -10,6 +11,7 @@ export const renderHTML = async () => {
   const eateriesHTML = await renderEateries();
   const detailsButtonHTML = detailsSideButton();
   const saveButtonHTML = SaveButton();
+  const weather = await renderWeather();
 
   return `
     <header class="header">
@@ -27,7 +29,7 @@ export const renderHTML = async () => {
 
     </article>
 
-     <article class="Weather">Weather</article>
+     <article class="Weather">${weather}</article>
      <div>
         <article class="preview">Itinerary Preview</article>
         ${detailsButtonHTML}
