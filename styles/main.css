@@ -17,4 +17,14 @@
     margin:100px
 }
 
+#error {
+    color: red;
+}
 
+#saveButton {
+    background-color: gray; /* Default grayed-out color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: not-allowed; /* Change cursor to indicate it's disabled */
+  }
