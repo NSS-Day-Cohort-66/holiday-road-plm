@@ -8,13 +8,35 @@
     justify-content: space-around;
 }
 
-.parks_html, .attraction_html, .eateries_html {
 
-}
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+  }
+  
+  .weather_html {
+    flex: 1;
 
-
-.weather_html{
-    margin:100px
-}
-
-
+  }
+  
+  .middle_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 2;
+  }
+  
+  .saved_itineraries {
+    flex: 1;
+  }
+  
+  /* Styling for individual elements */
+  .itinerary_preview_html,
+  .details_button_html,
+  .save_button_html,
+  .saved_itinerary_html {
+    margin: 5px;
+  }
+  
