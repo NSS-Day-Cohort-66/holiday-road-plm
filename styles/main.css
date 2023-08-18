@@ -9,41 +9,27 @@
 }
 
 
-.container {
+.previews_html {
     display: flex;
     flex-direction: row;
-    margin: 40px;
+    margin: 50px;
   }
   
   .weather_html {
     flex: 1;
-    font-family: 'Lato', sans-serif;
-
-  }
-
-  .weather_day_1, .weather_day_2, .weather_day_3, .weather_day_4, .weather_day_5 {
-    border: .5px solid black;
-    margin: 10px;
-    text-align: center;
+    padding: 10px;
   }
   
   .middle_column {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    flex: 2;
+    flex: 3;
+    padding: 10px;
   }
   
   .saved_itineraries {
     flex: 1;
-  }
-  
-  /* Styling for individual elements */
-  .itinerary_preview_html,
-  .details_button_html,
-  .save_button_html,
-  .saved_itinerary_html {
-    margin: 5px;
+    padding: 10px;
   }
   
