@@ -12,7 +12,7 @@ export const renderHTML = async () => {
   const eateriesHTML = await renderEateries()
   const detailsButtonHTML = detailsSideButton();
   const saveButtonHTML = SaveButton();
-//   const weather = await renderWeather();
+
 
   return `
     <header class="header">
@@ -28,7 +28,7 @@ export const renderHTML = async () => {
 
 
     <section class="previews_html">
-     <div class="weather_html">${weather}</div>
+     <div class="weather_html"></div>
         <div class="itinerary_preview_html">Itinerary Preview</div>
         <div class="details_button_html">${detailsButtonHTML}</div>
        <div class="save_button_html">${saveButtonHTML}</div> 
