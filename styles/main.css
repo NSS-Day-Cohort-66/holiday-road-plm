@@ -17,7 +17,14 @@
   
   .weather_html {
     flex: 1;
+    font-family: 'Lato', sans-serif;
 
+  }
+
+  .weather_day_1, .weather_day_2, .weather_day_3, .weather_day_4, .weather_day_5 {
+    border: .5px solid black;
+    margin: 10px;
+    text-align: center;
   }
   
   .middle_column {
