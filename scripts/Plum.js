@@ -19,6 +19,7 @@ export const renderHTML = async () => {
     <header class="header">
       <img src="" class=""/>
       <h1 class="title">Holiday Itinerary</h1>
+      <h3 class="tagline">"Roam, Capture, Connect: Your National Parks Companion"</h3>
     </header>
     
     <article class="all_dropdown_choices">
@@ -31,7 +32,7 @@ export const renderHTML = async () => {
 
     <section class="previews_html">
       <div class="weather_html"></div>
-      <div class="middle_column">
+        <div class="middle_column">
         <div class="itinerary_preview_html">Itinerary Preview</div>
         <article class="details_button_html">
           <div class="park_details"></div>
@@ -39,7 +40,7 @@ export const renderHTML = async () => {
           <div class="entree_details"></div>
         </article>
         <div class="save_button_html">${saveButtonHTML}</div>
-      </div>
+         </div>
       <div class="saved_itinerary_html">Saved Itinerary</div>
      </section>
     `;
