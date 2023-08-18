@@ -27,13 +27,14 @@ export const renderHTML = async () => {
     </article>
 
 
-    <section class="previews_html">
-     <div class="weather_html"></div>
-        <div class="itinerary_preview_html">Itinerary Preview</div>
-        <div class="details_button_html">${detailsButtonHTML}</div>
-       <div class="save_button_html">${saveButtonHTML}</div> 
-     <div class="saved_itinerary_html">Saved Itinerary</div>
-     </section>
-
+    <section class="container">
+    <div class="weather_html"></div>
+    <div class="middle_column">
+      <div class="column_item itinerary_preview_html">Itinerary Preview</div>
+      <div class="column_item details_button_html">${detailsButtonHTML}</div>
+      <div class="column_item save_button_html">${saveButtonHTML}</div>
+    </div>
+    <div class="saved_itineraries">Saved Itineraries</div>
+  </section>
     `;
 };
