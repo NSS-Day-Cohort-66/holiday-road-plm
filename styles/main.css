@@ -103,33 +103,23 @@ text-align: center;
     padding: 10px;
   }
   
-.saved_itinerary_html{
-  font-family: 'Inter', sans-serif;
-  font-weight: 900;
-  font-size: 25px;
-}
-
-
-
+  /* Styling for individual elements */
+  .itinerary_preview_html,
+  .details_button_html,
+  .save_button_html,
+  .saved_itinerary_html {
+    margin: 5px;
+  }
+  
 #error {
-  color: red;
+    color: red;
 }
-
 
 #saveButton {
-  background-color: #111010; 
-  color: rgb(247, 243, 243);
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;}
-
-#detailsButton {
-background-color: #b83737; 
-color: rgb(25, 24, 24);
-border: none;
-border-radius: 5px;
-padding: 5px 10px;
-cursor: pointer;
+    background-color: green; 
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer; 
 }
-

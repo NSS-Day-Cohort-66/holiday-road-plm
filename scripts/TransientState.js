@@ -56,3 +56,5 @@ export const saveItinerary = async () => {
 }
 
 document.addEventListener("click", handleSaveClick)
+
+

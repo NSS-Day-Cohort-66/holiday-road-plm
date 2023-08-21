@@ -6,11 +6,12 @@ import { renderWeather } from "./weather/WeatherProvider.js";
 import {
   parksDetailsButton,
   attractionDetailsButton,
-  entreeDetailsButton,
+  eateryDetailsButton,
 } from "./DetailsButton.js";
 import { displaySelectedParkName } from "./parks/ParkProvider.js";
 import { displaySelectedAttractionName } from "./attractions/AttractionProvider.js";
 import { displaySelectedEateryName } from "./eateries/EateryProvider.js";
+import { ItineraryList } from "./SavedItineraries.js";
 
 
 export const renderHTML = async () => {
@@ -21,6 +22,7 @@ export const renderHTML = async () => {
   const parkSelectionHTML = displaySelectedParkName()
   const attractionSelectionHTML = displaySelectedAttractionName()
   const eaterySelectionHTML = displaySelectedEateryName()
+  const itinerariesHTML = ItineraryList()
 
   return `
     <header class="header">
@@ -53,3 +55,4 @@ export const renderHTML = async () => {
      </section>
     `;
 };
+

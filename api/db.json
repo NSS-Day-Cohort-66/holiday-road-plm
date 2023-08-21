@@ -7,15 +7,15 @@
       "id": 1
     },
     {
-      "parkId": 5,
-      "eateryId": 14,
-      "attractionId": 13,
+      "parkId": 6,
+      "eateryId": 6,
+      "attractionId": 7,
       "id": 2
     },
     {
-      "parkId": 11,
-      "eateryId": 5,
-      "attractionId": 14,
+      "parkId": 4,
+      "eateryId": 22,
+      "attractionId": 28,
       "id": 3
     },
     {
