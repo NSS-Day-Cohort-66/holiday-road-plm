@@ -22,7 +22,7 @@ const handleAttractionChoice = (choice) => {
   if (choice.target.id === "attractions_dropdown") {
     const selectedOption = choice.target.options[choice.target.selectedIndex];
     const selectedAttractionName = selectedOption.textContent;
-    debugger
+
     setAttractionChoice(parseInt(selectedOption.value));
     displaySelectedAttractionName(selectedAttractionName);
   }
@@ -31,7 +31,7 @@ const handleAttractionChoice = (choice) => {
 
 export const displaySelectedAttractionName = (selectedAttractionName) => {
   const itineraryPreviewElement = document.getElementById("attractions_preview_html");
-  const attractionHTML = `${selectedAttractionName}`
+  const attractionHTML = `Attraction: ${selectedAttractionName}`
   if (itineraryPreviewElement) {
     itineraryPreviewElement.textContent = attractionHTML;
   }

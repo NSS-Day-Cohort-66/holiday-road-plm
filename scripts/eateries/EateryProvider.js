@@ -31,7 +31,7 @@ const handleEateryChoice = (choice) => {
 
 export const displaySelectedEateryName = (selectedEateryName) => {
   const itineraryPreviewElement = document.getElementById("eateries_preview_html");
-    const eateryHTML = `${selectedEateryName}`
+    const eateryHTML = `Eatery: ${selectedEateryName}`
    if (itineraryPreviewElement) {
     itineraryPreviewElement.textContent = eateryHTML;
   }

@@ -1,5 +1,5 @@
 body {
-  background-color: #b83737;
+  background-color: #faf5f5;
 }
 
 .header {
@@ -7,16 +7,20 @@ body {
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 150px;
   height: auto;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .title_logo {
-  max-width: 300px;
+  max-width: 200px;
   height: auto;
+
 }
 
+.title_logo_container {
+  background-color: #b83737;
+}
 
 .title {
   text-align: center;
@@ -30,7 +34,6 @@ body {
 }
 
 
-
 .all_dropdown_choices {
     display: flex;
     flex-direction: row;
@@ -40,40 +43,54 @@ body {
     font-weight: 500;
 }
 
-#error {
-    color: red;
+.previews_html {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+  
+  .weather_html {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+  }
+  
+
+.weather_day_0, .weather_day_1, .weather_day_2, .weather_day_3, .weather_day_4 {
+  width: 250px;
+  height: 250px; 
+  border: 1px solid black;
+  margin: 5px;
+text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.weather_icon  {
+  width: 50px;
+  height: 50px; 
+}
+
+.weather_date {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
 }
 
 
-#saveButton {
-    background-color: green; 
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;}
 
-.previews_html {
-    display: flex;
-    flex-direction: row;
-    margin: 50px;
-  }
-  
-  .weather_html {
-    flex: 1;
-    padding: 10px;
-  }
-  
-  .middle_column {
-    display: flex;
-    flex-direction: column;
-    align-items: space-around;
-    flex: 1;
-    padding: 10px;
+  .itinerary_preview {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 25px;
   }
   
 
 #park_preview_html, #attractions_preview_html, #eateries_preview_html {
   margin: 15px;
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
 }
 
 
@@ -86,3 +103,33 @@ body {
     padding: 10px;
   }
   
+.saved_itinerary_html{
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+}
+
+
+
+#error {
+  color: red;
+}
+
+
+#saveButton {
+  background-color: #111010; 
+  color: rgb(247, 243, 243);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;}
+
+#detailsButton {
+background-color: #b83737; 
+color: rgb(25, 24, 24);
+border: none;
+border-radius: 5px;
+padding: 5px 10px;
+cursor: pointer;
+}
+

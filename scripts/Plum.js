@@ -25,7 +25,7 @@ export const renderHTML = async () => {
   return `
     <header class="header">
        <div><img class="logo" src="images/national-park-logo-adventure.png" alt="logo"></div>
-       <div><img class="title_logo" src="images/Free_Sample_By_Wix.png" alt="logo"></div>
+       <div class="title_logo_container"><img class="title_logo" src="images/Free_Sample_By_Wix.png" alt="logo"></div>
       <h3 class="tagline">"Roam, Capture, Connect: Your National Parks Companion"</h3>
     </header>
     
@@ -36,25 +36,20 @@ export const renderHTML = async () => {
     </article>
 
     <section class="previews_html">
-      <div class="weather_html"></div>
-      <section class="middle_column">
-
-        <section class="itinerary_preview_html">Itinerary Preview
-                  <article class="details_button_html">
-              
+                    <div class="weather_html"></div>
+    <section class="itinerary_preview_html">
+                    <div class="itinerary_preview">Itinerary Preview</div>
+                     <article class="details_button_html">
                     <div id="park_preview_html"></div>
                     <div class="park_details"></div>
                     <div id="attractions_preview_html"></div>
                     <div class="attraction_details"></div>
                     <div id="eateries_preview_html"></div>
                     <div class="eateries_details"></div>
-                    </article>
-        <div class="save_button_html">${saveButtonHTML}</div>
-        <div id="error"></div>
+                    <div class="save_button_html">${saveButtonHTML}</div>
+                    <div id="error"></div>
         </section>
-         </section>
-
-      <div class="saved_itinerary_html">Saved Itinerary</div>
+                    <div class="saved_itinerary_html">Saved Itinerary</div>
      </section>
     `;
 };
