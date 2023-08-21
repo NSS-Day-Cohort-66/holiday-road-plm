@@ -52,7 +52,7 @@ export const renderHTML = async () => {
          </div>
 
 
-      <div class="saved_itinerary_html">Saved Itinerary</div>
+      <div class="saved_itinerary_html"></div>
      </section>
     `;
 };

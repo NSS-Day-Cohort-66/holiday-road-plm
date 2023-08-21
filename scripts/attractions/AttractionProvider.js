@@ -22,7 +22,6 @@ const handleAttractionChoice = (choice) => {
   if (choice.target.id === "attractions_dropdown") {
     const selectedOption = choice.target.options[choice.target.selectedIndex];
     const selectedAttractionName = selectedOption.textContent;
-    debugger
     setAttractionChoice(parseInt(selectedOption.value));
     displaySelectedAttractionName(selectedAttractionName);
   }
