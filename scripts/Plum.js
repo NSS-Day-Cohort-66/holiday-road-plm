@@ -30,15 +30,10 @@ export const renderHTML = async () => {
       <div class="eateries_html">${eateriesHTML}</div>
     </article>
 
-
-
     <section class="previews_html">
       <div class="weather_html"></div>
-        <section class="middle_column">
-
+      <div class="middle_column">
         <div class="itinerary_preview_html">Itinerary Preview</div>
-        <div id="park_selection">Park Selection: ${parkHTML}</div>
-
 
         <article class="details_button_html">
           <div class="park_details"></div>
@@ -46,7 +41,10 @@ export const renderHTML = async () => {
           <div class="entree_details"></div>
         </article>
         <div class="save_button_html">${saveButtonHTML}</div>
-         </section>
+        <div id="error"></div>
+
+         </div>
+
       <div class="saved_itinerary_html">Saved Itinerary</div>
      </section>
     `;
