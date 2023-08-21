@@ -1,4 +1,4 @@
-let transientState = {
+export let transientState = {
     parkId: 0,
     eateryId: 0,
     attractionId: 0

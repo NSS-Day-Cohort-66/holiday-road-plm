@@ -1,24 +1,17 @@
-import { renderParks } from "./parks/ParkProvider.js";
-
-
-
-// export const parkSelection = () => {
-//     const dropdown = document.querySelector("");
-//     const selectionDisplay = document.querySelector(".park_selection");
-//     debugger
-//     if (dropdown) {
-
-//         dropdown.addEventListener("change", (event) => {
-//             const selectedOption = event.target.id;
-//             selectionDisplay.textContent = `Selected Option: ${selectedOption}`;
-//         })
-//     }
-//     return ""; 
-// }
+import { transientState } from './TransientState.js'; 
 
 
 
 
-export const parkSelection = (event) => {
-    const selectedPark = event.target.parkId
+export const parkSelection = () => {
+    const selectedPark = transientState.parkId
+debugger
+    if (selectedPark) {
+        const parkContainer = document.getElementById("park_selection")
+        parkContainer.innerHTML = `
+        <h2>${selectedPark}</h2>`
+    }
+    return selectedPark
 }
+
+parkSelection()
