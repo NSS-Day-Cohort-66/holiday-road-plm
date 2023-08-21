@@ -28,18 +28,18 @@ export const renderHTML = async () => {
       <div class="eateries_html">${eateriesHTML}</div>
     </article>
 
-
-
     <section class="previews_html">
       <div class="weather_html"></div>
       <div class="middle_column">
         <div class="itinerary_preview_html">Itinerary Preview</div>
+
         <article class="details_button_html">
           <div class="park_details"></div>
           <div class="attraction_details"></div>
           <div class="entree_details"></div>
         </article>
         <div class="save_button_html">${saveButtonHTML}</div>
+        <div id="error"></div>
 
          </div>
 
