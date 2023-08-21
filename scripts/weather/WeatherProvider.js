@@ -14,8 +14,6 @@ const handleWeather = async (changeEvent) => {
 export const renderWeather = async (latitude, longitude) => {
     const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=729652beba72cb8ebe2d345b36b55b68&units=imperial`);
     const weather = await response.json();
-
-
     const formatDate = (dateString) => {
       const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
       return new Date(dateString).toLocaleDateString('en-US', options);
@@ -23,7 +21,7 @@ export const renderWeather = async (latitude, longitude) => {
 
   const getWeatherIconUrl = (iconCode) => {
     return `http://openweathermap.org/img/w/${iconCode}.png`;
-};
+  }
 
     const weatherHTML = `<div class="weather_day_1">
                         Date : ${formatDate(weather.list[0].dt_txt)}<br>
@@ -70,9 +68,11 @@ export const renderWeather = async (latitude, longitude) => {
                         Description: ${weather.list[32].weather[0].description}<br><br>
                         <img src="${getWeatherIconUrl(weather.list[32].weather[0].icon)}" alt="Weather Icon">
                         </div>
+
                         `
-    let weatherContainer = document.querySelector(".weather_html")
+    const weatherContainer = document.querySelector(".weather_html")
     weatherContainer.innerHTML = weatherHTML
+
 };
 
 document.addEventListener("change", handleWeather);

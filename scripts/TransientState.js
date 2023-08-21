@@ -25,9 +25,6 @@ const resetTransient = () => {
     }
 }
 
-
-
-
 const handleSaveClick = (click) => {
     if (click.target.id === "saveButton") {
         if (transientState.parkId &&
@@ -43,7 +40,7 @@ const handleSaveClick = (click) => {
     }
 }
 
-const saveItinerary = async () => {
+export const saveItinerary = async () => {
     const postOptions = {
         method: "POST",
         headers: {
@@ -59,4 +56,5 @@ const saveItinerary = async () => {
 }
 
 document.addEventListener("click", handleSaveClick)
+
 

@@ -2,34 +2,64 @@
     text-align: center;
 }
 
+.title {
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+}
+
+.tagline {
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
 .all_dropdown_choices {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+#error {
+    color: red;
 }
 
 
-.container {
+#saveButton {
+    background-color: green; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.previews_html {
     display: flex;
     flex-direction: row;
-    margin: 40px;
+    margin: 50px;
   }
   
   .weather_html {
     flex: 1;
-
+    padding: 10px;
   }
   
   .middle_column {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    flex: 2;
+    align-items: space-around;
+    flex: 1;
+    padding: 10px;
   }
   
   .saved_itineraries {
     flex: 1;
+    padding: 10px;
   }
   
   /* Styling for individual elements */
