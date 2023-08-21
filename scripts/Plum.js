@@ -8,12 +8,14 @@ import {
   attractionDetailsButton,
   entreeDetailsButton,
 } from "./DetailsButton.js";
+import { parkSelection } from "./ItineraryPreview.js";
 
 export const renderHTML = async () => {
   const parksHTML = await renderParks();
   const attractionsHTML = await renderAttractions();
   const eateriesHTML = await renderEateries();
   const saveButtonHTML = SaveButton();
+  const parkHTML = parkSelection()
 
   return `
     <header class="header">
@@ -40,9 +42,19 @@ export const renderHTML = async () => {
         </article>
         <div class="save_button_html">${saveButtonHTML}</div>
         <div id="error"></div>
+<<<<<<< HEAD
 
          </div>
 
+=======
+<<<<<<< HEAD
+      </div>
+=======
+
+         </div>
+
+>>>>>>> aa2dafebe1d77106b1559bceb02c7207566dbbf6
+>>>>>>> main
       <div class="saved_itinerary_html">Saved Itinerary</div>
      </section>
     `;
