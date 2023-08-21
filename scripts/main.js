@@ -6,5 +6,10 @@ const renderAllHTML = async () => {
   mainContainer.innerHTML = await renderHTML();
 };
 
+document.addEventListener("itinerarySaved", (event) => {
+  console.log("Refreshing...")
+  renderAllHTML()
+})
+
 renderAllHTML();
 
