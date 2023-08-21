@@ -4,7 +4,7 @@ export const ItineraryList = async () => {
 
     let tripsHTML = `<h2>Saved itineraries</h2>`
     let tripsArray = trips.map(
-        (trip) {
+        (trip) => {
             return `<div class='saved_itineraries'>
                     Park: <br>
                     Food: <br>
