@@ -1,3 +1,3 @@
 export const SaveButton = () => {
-  return `<button>Save Itinerary</button>`;
+  return `<button id="saveButton">Save Itinerary</button>`;
 };

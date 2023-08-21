@@ -24,7 +24,7 @@ export const attractionDetailsButton = (value) => {
 };
 
 export const eateryDetailsButton = (value) => {
-  const detailContainer = document.querySelector(".entree_details");
+  const detailContainer = document.querySelector(".eateries_details");
   const detailsHTML = `<button id="eateryDetailsButton" value="${value}">Details</button>`;
   detailContainer.innerHTML = detailsHTML;
 };

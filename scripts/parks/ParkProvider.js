@@ -21,7 +21,18 @@ export const renderParks = async () => {
 
 const handleParkChoice = (choice) => {
   if (choice.target.id === "parks_dropdown") {
+    const selectedOption = choice.target.options[choice.target.selectedIndex];
+    const selectedParkName = selectedOption.textContent;
     setParkChoice(parseInt(choice.target.value));
+    displaySelectedParkName(selectedParkName);
+  }
+};
+
+export const displaySelectedParkName = (selectedParkName) => {
+  const itineraryPreviewElement = document.getElementById("park_preview_html");
+  const parkHTML = `${selectedParkName}`
+  if (itineraryPreviewElement) {
+    itineraryPreviewElement.textContent = parkHTML;
   }
 };
 

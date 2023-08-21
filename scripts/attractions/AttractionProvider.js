@@ -17,10 +17,24 @@ export const renderAttractions = async () => {
   return html;
 };
 
+
 const handleAttractionChoice = (choice) => {
   if (choice.target.id === "attractions_dropdown") {
-      setAttractionChoice(parseInt(choice.target.value))
+    const selectedOption = choice.target.options[choice.target.selectedIndex];
+    const selectedAttractionName = selectedOption.textContent;
+    debugger
+    setAttractionChoice(parseInt(selectedOption.value));
+    displaySelectedAttractionName(selectedAttractionName);
   }
-}
+};
 
-document.addEventListener("change", handleAttractionChoice)
+
+export const displaySelectedAttractionName = (selectedAttractionName) => {
+  const itineraryPreviewElement = document.getElementById("attractions_preview_html");
+  const attractionHTML = `${selectedAttractionName}`
+  if (itineraryPreviewElement) {
+    itineraryPreviewElement.textContent = attractionHTML;
+  }
+};
+
+document.addEventListener("change", handleAttractionChoice);

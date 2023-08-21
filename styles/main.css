@@ -25,6 +25,17 @@
     font-weight: 500;
 }
 
+#error {
+    color: red;
+}
+
+
+#saveButton {
+    background-color: green; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;}
 
 .previews_html {
     display: flex;
