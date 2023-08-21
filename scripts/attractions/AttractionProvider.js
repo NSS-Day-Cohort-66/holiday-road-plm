@@ -5,7 +5,7 @@ export const renderAttractions = async () => {
   const attractions = await response.json();
 
   let html = `<h2>Attractions</h2>
-                <select id="attractions_dropdown">
+                <select class="dropdown" id="attractions_dropdown">
                 <option value="0">Woo hoo!</option>`;
 
   const divStringArray = attractions.map((attraction) => {
@@ -22,7 +22,6 @@ const handleAttractionChoice = (choice) => {
   if (choice.target.id === "attractions_dropdown") {
     const selectedOption = choice.target.options[choice.target.selectedIndex];
     const selectedAttractionName = selectedOption.textContent;
-    debugger
     setAttractionChoice(parseInt(selectedOption.value));
     displaySelectedAttractionName(selectedAttractionName);
   }

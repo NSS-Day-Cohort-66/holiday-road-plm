@@ -7,7 +7,7 @@ export const renderParks = async () => {
   const parks = await response.json();
 
   let parksHTML = `<h2>National Parks</h2>
-                    <select id="parks_dropdown">
+                    <select class="dropdown" id="parks_dropdown">
                     <option value="0">Parks yay!</option>`;
   let parkIdCounter = 0;
   const parksArray = parks.data.map((park) => {
