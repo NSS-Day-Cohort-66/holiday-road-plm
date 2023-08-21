@@ -25,5 +25,7 @@ const handleParkChoice = (choice) => {
   }
 };
 
+
+
 document.addEventListener("change", handleParkChoice);
 

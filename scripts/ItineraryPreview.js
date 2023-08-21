@@ -1,18 +1,24 @@
-const handleParkChoice = (choice) => {
-    if (choice.target.id === "parks_dropdown") {
-      const selectedOption = choice.target.options[choice.target.selectedIndex];
-      const latitude = selectedOption.getAttribute("data-latitude");
-      const longitude = selectedOption.getAttribute("data-longitude");
-      const parkName = selectedOption.text;
-      
-      const selectedParkDetails = `
-        <h4>${parkName}</h4>
-        <p>Latitude: ${latitude}</p>
-        <p>Longitude: ${longitude}</p>
-      `;
-      
-      const selectedParkContainer = document.getElementById(".itinerary_preview_html");
-      selectedParkContainer.innerHTML = selectedParkDetails;
-    }
-  };
-  
+import { renderParks } from "./parks/ParkProvider.js";
+
+
+
+// export const parkSelection = () => {
+//     const dropdown = document.querySelector("");
+//     const selectionDisplay = document.querySelector(".park_selection");
+//     debugger
+//     if (dropdown) {
+
+//         dropdown.addEventListener("change", (event) => {
+//             const selectedOption = event.target.id;
+//             selectionDisplay.textContent = `Selected Option: ${selectedOption}`;
+//         })
+//     }
+//     return ""; 
+// }
+
+
+
+
+export const parkSelection = (event) => {
+    const selectedPark = event.target.parkId
+}
