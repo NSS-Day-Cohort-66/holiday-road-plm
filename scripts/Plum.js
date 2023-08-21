@@ -39,8 +39,10 @@ export const renderHTML = async () => {
           <div class="entree_details"></div>
         </article>
         <div class="save_button_html">${saveButtonHTML}</div>
+        <div id="error"></div>
       </div>
       <div class="saved_itinerary_html">Saved Itinerary</div>
      </section>
     `;
 };
+

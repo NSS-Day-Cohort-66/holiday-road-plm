@@ -40,3 +40,15 @@
     margin: 5px;
   }
   
+#error {
+    color: red;
+}
+
+#saveButton {
+    background-color: green; 
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer; 
+}

@@ -7,3 +7,4 @@ const renderAllHTML = async () => {
 };
 
 renderAllHTML();
+
