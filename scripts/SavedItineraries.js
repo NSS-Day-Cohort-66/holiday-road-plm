@@ -16,12 +16,14 @@ export const ItineraryList = async () => {
         (trip) => {
 
             return `<div class='saved_itineraries'>
-                    Park: <br>
-                    Food: <br>
-                    Attraction: 
+                    Park: ${parks.data[trip.parkId - 1].fullName}<br>
+                    Food: ${eateries[trip.eateryId - 1].businessName}<br>
+                    Attraction: ${attractions[trip.attractionId - 1].name}
                     </div>`
         }
     )
     tripsHTML += tripsArray.join("")
-    return tripsHTML
+    const itineraryList = document.getElementById("saved_itinerary_html");
+    itineraryList.innerHTML = tripsHTML;
+    
 }

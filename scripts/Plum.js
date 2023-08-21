@@ -11,6 +11,7 @@ import {
 import { displaySelectedParkName } from "./parks/ParkProvider.js";
 import { displaySelectedAttractionName } from "./attractions/AttractionProvider.js";
 import { displaySelectedEateryName } from "./eateries/EateryProvider.js";
+import { ItineraryList } from "./SavedItineraries.js";
 
 
 export const renderHTML = async () => {
@@ -21,6 +22,7 @@ export const renderHTML = async () => {
   const parkSelectionHTML = displaySelectedParkName()
   const attractionSelectionHTML = displaySelectedAttractionName()
   const eaterySelectionHTML = displaySelectedEateryName()
+  const itinerariesHTML = ItineraryList()
 
   return `
     <header class="header">
@@ -37,27 +39,24 @@ export const renderHTML = async () => {
 
     <section class="previews_html">
       <div class="weather_html"></div>
-      <section class="middle_column">
 
+      <section class="middle_column">
         <section class="itinerary_preview_html">Itinerary Preview
-                  <article class="details_button_html">
-              
-                    <div id="park_preview_html"></div>
-                    <div class="park_details"></div>
-                    <div id="attractions_preview_html"></div>
-                    <div class="attraction_details"></div>
-                    <div id="eateries_preview_html"></div>
-                    <div class="eateries_details"></div>
-                    </article>
+            <article class="details_button_html">
+                <div id="park_preview_html"></div>
+                <div class="park_details"></div>
+                <div id="attractions_preview_html"></div>
+                <div class="attraction_details"></div>
+                <div id="eateries_preview_html"></div>
+                <div class="eateries_details"></div>
+            </article>
+        </section>
         <div class="save_button_html">${saveButtonHTML}</div>
         <div id="error"></div>
-
-      </div>
-         </div>
-
-
-      <div class="saved_itinerary_html"></div>
-     </section>
+      </section>
+      
+      <div id="saved_itinerary_html"></div>
+    </section>
     `;
 };
 
