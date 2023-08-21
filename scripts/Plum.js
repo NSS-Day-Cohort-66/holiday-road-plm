@@ -24,8 +24,8 @@ export const renderHTML = async () => {
 
   return `
     <header class="header">
-      <img src="" class=""/>
-      <h1 class="title">Holiday Itinerary</h1>
+       <div><img class="logo" src="images/national-park-logo-adventure.png" alt="logo"></div>
+       <div><img class="title_logo" src="images/Free_Sample_By_Wix.png" alt="logo"></div>
       <h3 class="tagline">"Roam, Capture, Connect: Your National Parks Companion"</h3>
     </header>
     

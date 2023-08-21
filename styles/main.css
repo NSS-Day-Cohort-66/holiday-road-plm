@@ -1,16 +1,31 @@
-.header{
-    text-align: center;
+body {
+  background-color: #b83737;
 }
 
+.header {
+ text-align: center;
+}
+
+.logo {
+  max-width: 100px;
+  height: auto;
+  margin-top: 30px;
+}
+
+.title_logo {
+  max-width: 300px;
+  height: auto;
+}
+
+
 .title {
-    align-items: center;
+  text-align: center;
     font-size: 40px;
     font-family: 'Inter', sans-serif;
     font-weight: 900;
 }
 
 .tagline {
-    align-items: center;
     font-family: 'Lato', sans-serif;
 }
 
@@ -56,6 +71,16 @@
     padding: 10px;
   }
   
+
+#park_preview_html, #attractions_preview_html, #eateries_preview_html {
+  margin: 15px;
+}
+
+
+  .save_button_html {
+    margin: 20px;
+  }
+
   .saved_itineraries {
     flex: 1;
     padding: 10px;
