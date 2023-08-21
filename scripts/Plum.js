@@ -6,7 +6,7 @@ import { renderWeather } from "./weather/WeatherProvider.js";
 import {
   parksDetailsButton,
   attractionDetailsButton,
-  entreeDetailsButton,
+  eateryDetailsButton,
 } from "./DetailsButton.js";
 
 export const renderHTML = async () => {
