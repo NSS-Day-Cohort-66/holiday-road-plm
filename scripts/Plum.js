@@ -8,12 +8,14 @@ import {
   attractionDetailsButton,
   entreeDetailsButton,
 } from "./DetailsButton.js";
+import { parkSelection } from "./ItineraryPreview.js";
 
 export const renderHTML = async () => {
   const parksHTML = await renderParks();
   const attractionsHTML = await renderAttractions();
   const eateriesHTML = await renderEateries();
   const saveButtonHTML = SaveButton();
+  const parkHTML = parkSelection()
 
   return `
     <header class="header">
