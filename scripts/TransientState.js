@@ -1,4 +1,4 @@
-let transientState = {
+export let transientState = {
     parkId: 0,
     eateryId: 0,
     attractionId: 0
@@ -25,9 +25,6 @@ const resetTransient = () => {
     }
 }
 
-
-
-
 const handleSaveClick = (click) => {
     if (click.target.id === "saveButton") {
         if (transientState.parkId &&
@@ -43,7 +40,7 @@ const handleSaveClick = (click) => {
     }
 }
 
-const saveItinerary = async () => {
+export const saveItinerary = async () => {
     const postOptions = {
         method: "POST",
         headers: {
