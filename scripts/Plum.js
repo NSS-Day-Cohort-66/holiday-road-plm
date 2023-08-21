@@ -3,7 +3,11 @@ import { renderAttractions } from "./attractions/AttractionProvider.js";
 import { renderEateries } from "./eateries/EateryProvider.js";
 import { SaveButton } from "./SaveButton.js";
 import { renderWeather } from "./weather/WeatherProvider.js";
-import { parksDetailsButton, attractionDetailsButton, entreeDetailsButton } from "./DetailsButton.js";
+import {
+  parksDetailsButton,
+  attractionDetailsButton,
+  eateryDetailsButton,
+} from "./DetailsButton.js";
 import { displaySelectedParkName } from "./parks/ParkProvider.js";
 import { displaySelectedAttractionName } from "./attractions/AttractionProvider.js";
 import { displaySelectedEateryName } from "./eateries/EateryProvider.js";
