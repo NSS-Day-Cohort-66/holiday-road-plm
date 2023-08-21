@@ -3,19 +3,20 @@ import { renderAttractions } from "./attractions/AttractionProvider.js";
 import { renderEateries } from "./eateries/EateryProvider.js";
 import { SaveButton } from "./SaveButton.js";
 import { renderWeather } from "./weather/WeatherProvider.js";
-import {
-  parksDetailsButton,
-  attractionDetailsButton,
-  entreeDetailsButton,
-} from "./DetailsButton.js";
-import { parkSelection } from "./ItineraryPreview.js";
+import { parksDetailsButton, attractionDetailsButton, entreeDetailsButton } from "./DetailsButton.js";
+import { displaySelectedParkName } from "./parks/ParkProvider.js";
+import { displaySelectedAttractionName } from "./attractions/AttractionProvider.js";
+import { displaySelectedEateryName } from "./eateries/EateryProvider.js";
+
 
 export const renderHTML = async () => {
   const parksHTML = await renderParks();
   const attractionsHTML = await renderAttractions();
   const eateriesHTML = await renderEateries();
   const saveButtonHTML = SaveButton();
-  const parkHTML = parkSelection()
+  const parkSelectionHTML = displaySelectedParkName()
+  const attractionSelectionHTML = displaySelectedAttractionName()
+  const eaterySelectionHTML = displaySelectedEateryName()
 
   return `
     <header class="header">
@@ -32,29 +33,25 @@ export const renderHTML = async () => {
 
     <section class="previews_html">
       <div class="weather_html"></div>
-      <div class="middle_column">
-        <div class="itinerary_preview_html">Itinerary Preview</div>
+      <section class="middle_column">
 
-        <article class="details_button_html">
-          <div class="park_details"></div>
-          <div class="attraction_details"></div>
-          <div class="entree_details"></div>
-        </article>
+        <section class="itinerary_preview_html">Itinerary Preview
+                  <article class="details_button_html">
+              
+                    <div id="park_preview_html"></div>
+                    <div class="park_details"></div>
+                    <div id="attractions_preview_html"></div>
+                    <div class="attraction_details"></div>
+                    <div id="eateries_preview_html"></div>
+                    <div class="eateries_details"></div>
+                    </article>
         <div class="save_button_html">${saveButtonHTML}</div>
         <div id="error"></div>
-<<<<<<< HEAD
 
-         </div>
-
-=======
-<<<<<<< HEAD
       </div>
-=======
-
          </div>
 
->>>>>>> aa2dafebe1d77106b1559bceb02c7207566dbbf6
->>>>>>> main
+
       <div class="saved_itinerary_html">Saved Itinerary</div>
      </section>
     `;

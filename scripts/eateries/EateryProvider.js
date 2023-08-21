@@ -18,10 +18,26 @@ export const renderEateries = async() => {
     return html
 }
 
+
 const handleEateryChoice = (choice) => {
-    if (choice.target.id === "eateries_dropdown") {
-        setEateryChoice(parseInt(choice.target.value))
-    }
+  if (choice.target.id === "eateries_dropdown") {
+    const selectedOption = choice.target.options[choice.target.selectedIndex];
+    const selectedEateryName = selectedOption.textContent;
+    setEateryChoice(parseInt(selectedOption.value));
+    displaySelectedEateryName(selectedEateryName);
   }
-  
-  document.addEventListener("change", handleEateryChoice)
+};
+
+
+export const displaySelectedEateryName = (selectedEateryName) => {
+  const itineraryPreviewElement = document.getElementById("eateries_preview_html");
+    const eateryHTML = `${selectedEateryName}`
+   if (itineraryPreviewElement) {
+    itineraryPreviewElement.textContent = eateryHTML;
+  }
+};
+
+
+document.addEventListener("change", handleEateryChoice);
+
+

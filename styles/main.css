@@ -35,8 +35,7 @@
     color: white;
     border: none;
     padding: 5px 10px;
-    cursor: pointer;
-}
+    cursor: pointer;}
 
 .previews_html {
     display: flex;
