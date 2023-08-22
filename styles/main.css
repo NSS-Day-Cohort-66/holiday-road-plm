@@ -106,7 +106,7 @@ color: #e08438;
   .saved_itineraries {
     font-family: 'Patagonia';
     flex: 1;
-    padding: 10px;
+    /* padding: 10px; */
   }
   
   /* Styling for individual elements */
@@ -121,7 +121,7 @@ color: #e08438;
     color: red;
 }
 
-#parkDetailsButton, #attractionDetailsButton, #eateryDetailsButton {
+#parkDetailsButton, #attractionDetailsButton, #eateryDetailsButton, .directions_button {
   
   font-family: 'Patagonia';
   margin: 10px;
@@ -142,14 +142,14 @@ color: #e08438;
   touch-action: manipulation;
 }
 
-#parkDetailsButton:hover, #attractionDetailsButton:hover, #eateryDetailsButton:hover {
+#parkDetailsButton:hover, #attractionDetailsButton:hover, #eateryDetailsButton:hover, .directions_button:hover {
   background-position: right center;
   /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
 }
 
-#parkDetailsButton:active, #attractionDetailsButton:active, #eateryDetailsButton:active {
+#parkDetailsButton:active, #attractionDetailsButton:active, #eateryDetailsButton:active, .directions_button:active {
   transform: scale(0.95);
 }
 
@@ -169,11 +169,15 @@ color: #e08438;
   background-position: right center;
 }
 
+.directions_button {
+  padding: 5px 10px;
+}
+
 .save_button {
     background-color: grey; 
     border-radius: 5px;
     color: white;
-    /* border: none; */
+    border: none;
     padding: 5px 10px;
     cursor: not-allowed;
     /* border-width: 2px;
