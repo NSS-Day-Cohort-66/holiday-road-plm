@@ -26,7 +26,7 @@ const resetTransient = () => {
 }
 
 const handleSaveClick = (click) => {
-    if (click.target.id === "saveButton") {
+    if (click.target.id === "save_click") {
         if (transientState.parkId &&
             transientState.eateryId &&
             transientState.attractionId) {

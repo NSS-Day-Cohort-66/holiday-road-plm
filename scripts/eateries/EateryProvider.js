@@ -1,4 +1,5 @@
 import { setEateryChoice } from "../TransientState.js"
+import { buttonChange } from "../SaveButton.js"
 
 export const renderEateries = async() => {
     const response = await fetch("http://holidayroad.nss.team/eateries")
@@ -25,6 +26,7 @@ const handleEateryChoice = (choice) => {
     const selectedEateryName = selectedOption.textContent;
     setEateryChoice(parseInt(selectedOption.value));
     displaySelectedEateryName(selectedEateryName);
+    buttonChange()
   }
 };
 

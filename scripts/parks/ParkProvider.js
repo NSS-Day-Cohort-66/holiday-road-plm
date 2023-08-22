@@ -1,4 +1,5 @@
 import { setParkChoice } from "../TransientState.js";
+import { buttonChange } from "../SaveButton.js"
 
 export const renderParks = async () => {
   const response = await fetch(
@@ -25,6 +26,7 @@ const handleParkChoice = (choice) => {
     const selectedParkName = selectedOption.textContent;
     setParkChoice(parseInt(choice.target.value));
     displaySelectedParkName(selectedParkName);
+    buttonChange()
   }
 };
 

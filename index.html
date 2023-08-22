@@ -14,26 +14,6 @@
 </head>
   <body>
     <main id="container"></main>
-    <script type="module" src="./scripts/main.js">
-      const saveButton = document.getElementById("saveButton")
-    const checkDropdowns = () => {
-      const changedDropdowns = []
-      dropdowns.forEach(dropdown => {
-        const selectedValue = dropdown.options[dropdown.selectedIndex].value
-        if (selectedValue !== "0") {
-          changedDropdowns.push(dropdown)
-        }
-      })
-        if (changedDropdowns.length === 3) {
-          saveButton.classList.add("button-active")
-        } else {
-          saveButton.classList.remove("button-active")
-        }
-    }
-  dropdowns.forEach(dropdown => {
-    dropdown.addEventListener("change", checkDropdowns)
-  })
-    </script>
-    </script>
+    <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>
