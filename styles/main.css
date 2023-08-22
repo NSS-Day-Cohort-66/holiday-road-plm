@@ -63,17 +63,23 @@ color: #e08438;
 
 
 .weather_day_0, .weather_day_1, .weather_day_2, .weather_day_3, .weather_day_4 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 250px;
-  height: 250px; 
+  height: 220px; 
   border: 1px solid rgb(255, 255, 255);
-  margin: 5px;
+  margin-bottom: 5px;
   text-align: center;
+  border-radius: 10px;
+  font-family: 'Patagonia';
 
 }
 
 .weather_icon  {
   width: 50px;
   height: 50px; 
+  margin-top: 5px;
 }
 
 .itinerary_preview {
@@ -86,9 +92,9 @@ color: #e08438;
   font-size: 25px;
 }
 
-
   .save_button_html {
     margin: 20px;
+    font-family: 'Patagonia';
   }
 
 #saved_itinerary_html {
@@ -115,19 +121,76 @@ color: #e08438;
     color: red;
 }
 
+#parkDetailsButton, #attractionDetailsButton, #eateryDetailsButton {
+  
+  font-family: 'Patagonia';
+  margin: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#parkDetailsButton:hover, #attractionDetailsButton:hover, #eateryDetailsButton:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+#parkDetailsButton:active, #attractionDetailsButton:active, #eateryDetailsButton:active {
+  transform: scale(0.95);
+}
+
+.details_park, .details_attraction, .details_eatery {
+  margin: 20px 20px;
+  /* border: 1px solid rgb(255, 255, 255); */
+  /* background-color: #dd3835; */
+  /* background-image: linear-gradient(to bottom, rgba(224, 132, 56, 0.5), rgba(216, 57, 55, 0.5)); */
+  /* background-image: linear-gradient(to bottom, #e08438, #d83937); */
+  /* background-color: rgb(216, 57, 55, .5); */
+  border-radius: 10px;
+  padding: 30px;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+}
+
+.details_park:hover, .details_attraction:hover, .details_eatery:hover {
+  background-position: right center;
+}
+
 .save_button {
     background-color: grey; 
     border-radius: 5px;
     color: white;
-    border: none;
+    /* border: none; */
     padding: 5px 10px;
     cursor: not-allowed;
+    /* border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial; */
 }
 
 .button-active {
-    background-color: green;
+    background-color: #e08438;
     cursor: pointer;
     transition: transform 0.3s ease;
+    font-family: 'Patagonia';
+    /* border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial; */
 }
 
 .button-active:hover {
@@ -139,3 +202,42 @@ color: #e08438;
 // orange color: e08438
 // red color : d83937
 // black color : 0b0c0c
+
+<!-- HTML !-->
+<button class="button-87" role="button">Button 87</button>
+
+/* CSS */
+.button-87 {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-87:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-87:active {
+  transform: scale(0.95);
+}
+
+font-family: 'Patagonia';
+  background-color: #e08438;
+  border-radius: 5px;
