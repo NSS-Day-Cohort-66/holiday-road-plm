@@ -46,22 +46,23 @@ const parkDetailsFunction = async (event) => {
   );
   const parks = await response.json();
   const parksArray = parks.data;
+  const detailsContainer = document.querySelector(".details")
 
   let html = "Error";
   for (const obj of parksArray) {
     if (obj.latitude == event.target.dataset.latitude) {
-      html = `Name: ${obj.fullName}
+      html = `<div>Name: ${obj.fullName}
               State: ${obj.states}
               Designation: ${obj.designation}
-              Description: ${obj.description}`;
-    }
+              Description: ${obj.description}</div>`;
+    }}
+    detailsContainer.innerHTML = html;
   }
-  window.alert(html);
-};
 
 const attractionDetailsFunction = async (event) => {
   const response = await fetch("http://holidayroad.nss.team/bizarreries");
   const bizzarreries = await response.json();
+  const detailsContainer = document.querySelector(".details")
 
   let html = "Error";
   for (const obj of bizzarreries) {
@@ -69,14 +70,14 @@ const attractionDetailsFunction = async (event) => {
       html = `Name: ${obj.name}
               City, State: ${obj.city}, ${obj.state}
               Description: ${obj.description}`;
-    }
+    }}
+    detailsContainer.innerHTML = html;
   }
-  window.alert(html);
-};
 
 const eateryDetailsFunction = async (event) => {
   const response = await fetch("http://holidayroad.nss.team/eateries");
   const eateries = await response.json();
+  const detailsContainer = document.querySelector(".details")
 
   let html = "Error";
   for (const obj of eateries) {
@@ -84,10 +85,9 @@ const eateryDetailsFunction = async (event) => {
       html = `Name: ${obj.businessName}
               City, State: ${obj.city}, ${obj.state}
               Description: ${obj.description}`;
-    }
+    }}
+    detailsContainer.innerHTML = html;
   }
-  window.alert(html);
-};
 
 document.addEventListener("change", handleDetailsButtonRender);
 document.addEventListener("click", handleDetailsRender);

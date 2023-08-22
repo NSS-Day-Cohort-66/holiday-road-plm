@@ -1,74 +1,74 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('touch-of-nature.regular.ttf')
+}
 
-// orange color: e08438
-// red color : d83937
-// black color : 0b0c0c
-
-
-body {
-  background-color: #faf5f5;
+@font-face {
+  font-family: 'Patagonia';
+  src: url('belwelightbt.ttf')
 }
 
 .header {
  text-align: center;
 }
 
+body {
+  background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/upwk61824402-wikimedia-image.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=6febcfa89566b77064be13aebe5b9a73");
+  background-size: cover;
+  color: white;
+}
+
 .logo {
   max-width: 150px;
   height: auto;
-  margin-top: 10px;
-}
-
-.title_logo {
-  max-width: 200px;
-  height: auto;
-
-}
-
-.title_logo_container {
-  background-color: #b83737;
+  margin-top: 20px
 }
 
 .title {
-  text-align: center;
-    font-size: 40px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 900;
+font-family: 'CustomFont';
+font-size: 100px;
+margin-top: 20px;
+margin-bottom: 20px;
+color: #e08438;
 }
 
 .tagline {
-    font-family: 'Lato', sans-serif;
+  font-family: 'Patagonia'
 }
-
 
 .main_container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
+
 }
 
 .middle_container {
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 700px;
 }
   
-.weather_html, .itinerary_preview, #saved_itinerary_html {
+.weather_html, .itinerary_preview, #saved_itinerary_html, .weather_header {
   margin-top: 50px;
 }
 
-  
+.attractions_html, .itinerary_preview, .parks_html, .eateries_html, .saved_itineraries_header, .weather_header {
+  font-family: 'CustomFont';
+  color: #e08438;
+  font-size: 25px;
+}
+
 
 .weather_day_0, .weather_day_1, .weather_day_2, .weather_day_3, .weather_day_4 {
   width: 250px;
   height: 250px; 
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   margin: 5px;
-text-align: center;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
+  text-align: center;
+
 }
 
 .weather_icon  {
@@ -76,23 +76,14 @@ text-align: center;
   height: 50px; 
 }
 
-.weather_date {
-  font-family: 'Inter', sans-serif;
-  font-weight: 900;
-}
-
-
-  .itinerary_preview {
-    font-family: 'Inter', sans-serif;
-    font-weight: 900;
+.itinerary_preview {
     font-size: 25px;
   }
   
 
 #park_preview_html, #attractions_preview_html, #eateries_preview_html {
   margin: 15px;
-  font-family: 'Lato', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 
@@ -100,7 +91,14 @@ text-align: center;
     margin: 20px;
   }
 
+#saved_itinerary_html {
+  font-family: 'Patagonia';
+  text-align: left;
+}
+
+
   .saved_itineraries {
+    font-family: 'Patagonia';
     flex: 1;
     padding: 10px;
   }
@@ -136,3 +134,8 @@ text-align: center;
     box-shadow: 2px 2px 3px grey;
     transform: scale(1.05);
 }
+
+
+// orange color: e08438
+// red color : d83937
+// black color : 0b0c0c
