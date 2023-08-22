@@ -1,22 +1,46 @@
-.header{
-    text-align: center;
+
+// orange color: e08438
+// red color : d83937
+// black color : 0b0c0c
+
+
+body {
+  background-color: #faf5f5;
+}
+
+.header {
+ text-align: center;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.title_logo {
+  max-width: 200px;
+  height: auto;
+
+}
+
+.title_logo_container {
+  background-color: #b83737;
 }
 
 .title {
-    align-items: center;
+  text-align: center;
     font-size: 40px;
     font-family: 'Inter', sans-serif;
     font-weight: 900;
 }
 
 .tagline {
-    align-items: center;
     font-family: 'Lato', sans-serif;
 }
 
 
-
-.all_dropdown_choices {
+.main_container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -25,37 +49,57 @@
     font-weight: 500;
 }
 
-#error {
-    color: red;
+.middle_container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+  
+.weather_html, .itinerary_preview, #saved_itinerary_html {
+  margin-top: 50px;
+}
+
+  
+
+.weather_day_0, .weather_day_1, .weather_day_2, .weather_day_3, .weather_day_4 {
+  width: 250px;
+  height: 250px; 
+  border: 1px solid black;
+  margin: 5px;
+text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.weather_icon  {
+  width: 50px;
+  height: 50px; 
+}
+
+.weather_date {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
 }
 
 
-#saveButton {
-    background-color: green; 
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;}
+  .itinerary_preview {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+  }
+  
 
-.previews_html {
-    display: flex;
-    flex-direction: row;
-    margin: 50px;
+#park_preview_html, #attractions_preview_html, #eateries_preview_html {
+  margin: 15px;
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+}
+
+
+  .save_button_html {
+    margin: 20px;
   }
-  
-  .weather_html {
-    flex: 1;
-    padding: 10px;
-  }
-  
-  .middle_column {
-    display: flex;
-    flex-direction: column;
-    align-items: space-around;
-    flex: 1;
-    padding: 10px;
-  }
-  
+
   .saved_itineraries {
     flex: 1;
     padding: 10px;

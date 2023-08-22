@@ -31,8 +31,8 @@ export const renderWeather = async (latitude, longitude) => {
   for (const dayIndex of [0, 8, 16, 24, 32]) {
       weatherHTML += `
           <div class="weather_day_${dayIndex / 8}">
-              <img src="${getWeatherIconUrl(weather.list[dayIndex].weather[0].icon)}" alt="Weather Icon">
-              Date: ${formatDate(weather.list[dayIndex].dt_txt)}<br>
+              <img class="weather_icon" src="${getWeatherIconUrl(weather.list[dayIndex].weather[0].icon)}" alt="Weather Icon">
+              <div class="weather_date">Date: ${formatDate(weather.list[dayIndex].dt_txt)}<br><br></div>
               Local Forecast: ${Math.round(weather.list[dayIndex].main.temp)}°F<br>
               Feels like: ${Math.round(weather.list[dayIndex].main.feels_like)}°F<br>
               Chance of Rain: ${Math.round(weather.list[dayIndex].pop * 100)}%<br>

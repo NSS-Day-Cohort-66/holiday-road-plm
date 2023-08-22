@@ -18,7 +18,7 @@ export const renderHTML = async () => {
   const parksHTML = await renderParks();
   const attractionsHTML = await renderAttractions();
   const eateriesHTML = await renderEateries();
-  const saveButtonHTML = SaveButton();
+  const saveButtonHTML = await SaveButton();
   const parkSelectionHTML = displaySelectedParkName()
   const attractionSelectionHTML = displaySelectedAttractionName()
   const eaterySelectionHTML = displaySelectedEateryName()
@@ -26,37 +26,34 @@ export const renderHTML = async () => {
 
   return `
     <header class="header">
-      <img src="" class=""/>
-      <h1 class="title">Holiday Itinerary</h1>
+       <div><img class="logo" src="images/national-park-logo-adventure.png" alt="logo"></div>
+       <div class="title_logo_container"><img class="title_logo" src="images/Free_Sample_By_Wix.png" alt="logo"></div>
       <h3 class="tagline">"Roam, Capture, Connect: Your National Parks Companion"</h3>
     </header>
     
-    <article class="all_dropdown_choices">
-      <div class="parks_html">${parksHTML}</div>
-      <div class="attractions_html">${attractionsHTML}</div>
-      <div class="eateries_html">${eateriesHTML}</div>
-    </article>
-
-    <section class="previews_html">
-      <div class="weather_html"></div>
-
-      <section class="middle_column">
-        <section class="itinerary_preview_html">Itinerary Preview
-            <article class="details_button_html">
+    <article class="main_container">
+            <section class="left_container">
+                <div class="parks_html">${parksHTML}</div>
+                <div class="weather_html"></div>
+            </section>
+            <section class="middle_container">
+                <div class="attractions_html">${attractionsHTML}</div>
+                <div class="itinerary_preview">Itinerary Preview</div>
+                <article class="details_button_html">
                 <div id="park_preview_html"></div>
                 <div class="park_details"></div>
                 <div id="attractions_preview_html"></div>
                 <div class="attraction_details"></div>
                 <div id="eateries_preview_html"></div>
                 <div class="eateries_details"></div>
-            </article>
-        </section>
-        <div class="save_button_html">${saveButtonHTML}</div>
-        <div id="error"></div>
-      </section>
-      
-      <div id="saved_itinerary_html"></div>
-    </section>
+                <div class="save_button_html">${saveButtonHTML}</div>
+                <div id="error"></div>
+            </section>
+            <section class="right_container">
+                <div class="eateries_html">${eateriesHTML}</div>
+                <div id="saved_itinerary_html">Saved Itinerary</div>
+            </section>
+    </article>
     `;
 };
 
