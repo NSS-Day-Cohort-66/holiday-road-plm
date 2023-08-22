@@ -11,15 +11,17 @@ export const ItineraryList = async () => {
     const response4 = await fetch("https://developer.nps.gov/api/v1/parks?limit=20&api_key=raQAwREdVS4V3isCCYzljmmPmg30rf9X3ZvfVZam")
     const parks = await response4.json()
 
-    let tripsHTML = `<h2>Saved itineraries</h2>`
+    let tripsHTML = `<h2 class="saved_itineraries_header">Saved Itineraries</h2>`
     let tripsArray = trips.map(
         (trip) => {
 
-            return `<div class='saved_itineraries'>
+            return `<ul class='saved_itineraries'>
+                    <li>
                     Park: ${parks.data[trip.parkId - 1].fullName}<br>
                     Food: ${eateries[trip.eateryId - 1].businessName}<br>
                     Attraction: ${attractions[trip.attractionId - 1].name}
-                    </div>`
+                    </li>
+                    </ul>`
         }
     )
     tripsHTML += tripsArray.join("")

@@ -26,14 +26,15 @@ export const renderHTML = async () => {
 
   return `
     <header class="header">
-       <div><img class="logo" src="images/national-park-logo-adventure.png" alt="logo"></div>
-       <div class="title_logo_container"><img class="title_logo" src="images/Free_Sample_By_Wix.png" alt="logo"></div>
+    <img class="logo" src="images/logo.png" alt="logo">
+    <h2 class="title">Holiday Road</h2>
       <h3 class="tagline">"Roam, Capture, Connect: Your National Parks Companion"</h3>
     </header>
     
     <article class="main_container">
             <section class="left_container">
                 <div class="parks_html">${parksHTML}</div>
+                <div class="weather_header">Weather</div>
                 <div class="weather_html"></div>
             </section>
             <section class="middle_container">
@@ -46,12 +47,13 @@ export const renderHTML = async () => {
                 <div class="attraction_details"></div>
                 <div id="eateries_preview_html"></div>
                 <div class="eateries_details"></div>
+                <div class="details">Details:</div>
                 <div class="save_button_html">${saveButtonHTML}</div>
                 <div id="error"></div>
             </section>
             <section class="right_container">
                 <div class="eateries_html">${eateriesHTML}</div>
-                <div id="saved_itinerary_html">Saved Itinerary</div>
+                <div id="saved_itinerary_html"></div>
             </section>
     </article>
     `;
