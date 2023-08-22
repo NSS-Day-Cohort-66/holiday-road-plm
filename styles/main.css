@@ -115,11 +115,22 @@ text-align: center;
     color: red;
 }
 
-#saveButton {
-    background-color: green; 
+.save_button {
+    background-color: grey; 
     border-radius: 5px;
     color: white;
     border: none;
     padding: 5px 10px;
-    cursor: pointer; 
+    cursor: not-allowed;
+}
+
+.button-active {
+    background-color: green;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.button-active:hover {
+    box-shadow: 2px 2px 3px grey;
+    transform: scale(1.05);
 }
