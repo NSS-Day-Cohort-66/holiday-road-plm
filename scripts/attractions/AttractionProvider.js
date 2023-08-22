@@ -32,7 +32,7 @@ const handleAttractionChoice = (choice) => {
 
 export const displaySelectedAttractionName = (selectedAttractionName) => {
   const itineraryPreviewElement = document.getElementById("attractions_preview_html");
-  const attractionHTML = `Attraction: ${selectedAttractionName}`
+  const attractionHTML = `${selectedAttractionName}`
   if (itineraryPreviewElement) {
     itineraryPreviewElement.textContent = attractionHTML;
   }

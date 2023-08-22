@@ -51,9 +51,9 @@ const parkDetailsFunction = async (event) => {
   let html = "Error";
   for (const obj of parksArray) {
     if (obj.latitude == event.target.dataset.latitude) {
-      html = `<div>Name: ${obj.fullName}
-              State: ${obj.states}
-              Designation: ${obj.designation}
+      html = `<div class="details_park">Name: ${obj.fullName} <br>
+              State: ${obj.states} <br>
+              Designation: ${obj.designation}<br>
               Description: ${obj.description}</div>`;
     }}
     detailsContainer.innerHTML = html;
@@ -67,9 +67,10 @@ const attractionDetailsFunction = async (event) => {
   let html = "Error";
   for (const obj of bizzarreries) {
     if (obj.id == event.target.value) {
-      html = `Name: ${obj.name}
-              City, State: ${obj.city}, ${obj.state}
-              Description: ${obj.description}`;
+      html = `<div class="details_attraction">Name: ${obj.name}<br>
+              City, State: ${obj.city}, ${obj.state}<br>
+              Description: ${obj.description}
+              </div>`
     }}
     detailsContainer.innerHTML = html;
   }
@@ -82,9 +83,10 @@ const eateryDetailsFunction = async (event) => {
   let html = "Error";
   for (const obj of eateries) {
     if (obj.id == event.target.value) {
-      html = `Name: ${obj.businessName}
-              City, State: ${obj.city}, ${obj.state}
-              Description: ${obj.description}`;
+      html = `<div class="details_eatery">Name: ${obj.businessName}<br>
+              City, State: ${obj.city}, ${obj.state}<br>
+              Description: ${obj.description}
+              </div>`
     }}
     detailsContainer.innerHTML = html;
   }
