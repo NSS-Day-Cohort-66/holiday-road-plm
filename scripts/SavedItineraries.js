@@ -29,3 +29,34 @@ export const ItineraryList = async () => {
     itineraryList.innerHTML = tripsHTML;
     
 }
+
+export const eventsButton = async () => {
+    return `<button class="events_button" id="save_click">Events</button>`
+}
+
+
+export const fetchEvents = async (events) => {
+    const apiKey = "u4HNwSA9HBy4oJIhFrGTQG2Xo9xrlV7mVMfmthTd"
+    const limit = 2
+    const apiURL = `https://developer.nps.gov/api/v1/events?limit=${limit}&parkCode=&api_key=${apiKey}`
+    
+    const response = await fetch(apiURL)
+    const eventsResponse = await response.json()
+
+    const eventsContainer = document.querySelector(".event_container")
+    const eventHTML = eventsResponse.map(event => {
+        `<div class="event">
+        <h3>${event.title}</h3>
+        <p>Date: ${event.dateStart}</p>
+        <p>Time: ${event.timeStart} - ${event.timeEnd}</p>
+        <p>Description: ${event.description}</p>
+        <p>Fee Info: ${event.feeInfo}</p>
+    </div>`.join('')
+    })
+    eventsContainer.innerHTML = eventHTML
+}
+
+document.addEventListener("click", fetchEvents)
+
+
+
