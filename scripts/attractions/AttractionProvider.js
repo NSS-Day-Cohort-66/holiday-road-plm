@@ -1,4 +1,5 @@
 import { setAttractionChoice } from "../TransientState.js";
+import { buttonChange } from "../SaveButton.js"
 
 export const renderAttractions = async () => {
   const response = await fetch("http://holidayroad.nss.team/bizarreries");
@@ -24,6 +25,7 @@ const handleAttractionChoice = (choice) => {
     const selectedAttractionName = selectedOption.textContent;
     setAttractionChoice(parseInt(selectedOption.value));
     displaySelectedAttractionName(selectedAttractionName);
+    buttonChange()
   }
 };
 
