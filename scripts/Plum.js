@@ -18,7 +18,7 @@ export const renderHTML = async () => {
   const parksHTML = await renderParks();
   const attractionsHTML = await renderAttractions();
   const eateriesHTML = await renderEateries();
-  const saveButtonHTML = SaveButton();
+  const saveButtonHTML = await SaveButton();
   const parkSelectionHTML = displaySelectedParkName()
   const attractionSelectionHTML = displaySelectedAttractionName()
   const eaterySelectionHTML = displaySelectedEateryName()
@@ -31,28 +31,29 @@ export const renderHTML = async () => {
       <h3 class="tagline">"Roam, Capture, Connect: Your National Parks Companion"</h3>
     </header>
     
-    <article class="all_dropdown_choices">
-      <div class="parks_html">${parksHTML}</div>
-      <div class="attractions_html">${attractionsHTML}</div>
-      <div class="eateries_html">${eateriesHTML}</div>
+    <article class="main_container">
+            <section class="left_container">
+                <div class="parks_html">${parksHTML}</div>
+                <div class="weather_html"></div>
+            </section>
+            <section class="middle_container">
+                <div class="attractions_html">${attractionsHTML}</div>
+                <div class="itinerary_preview">Itinerary Preview</div>
+                <article class="details_button_html">
+                <div id="park_preview_html"></div>
+                <div class="park_details"></div>
+                <div id="attractions_preview_html"></div>
+                <div class="attraction_details"></div>
+                <div id="eateries_preview_html"></div>
+                <div class="eateries_details"></div>
+                <div class="save_button_html">${saveButtonHTML}</div>
+                <div id="error"></div>
+            </section>
+            <section class="right_container">
+                <div class="eateries_html">${eateriesHTML}</div>
+                <div id="saved_itinerary_html">Saved Itinerary</div>
+            </section>
     </article>
-
-    <section class="previews_html">
-                    <div class="weather_html"></div>
-    <section class="itinerary_preview_html">
-                    <div class="itinerary_preview">Itinerary Preview</div>
-                     <article class="details_button_html">
-                    <div id="park_preview_html"></div>
-                    <div class="park_details"></div>
-                    <div id="attractions_preview_html"></div>
-                    <div class="attraction_details"></div>
-                    <div id="eateries_preview_html"></div>
-                    <div class="eateries_details"></div>
-                    <div class="save_button_html">${saveButtonHTML}</div>
-                    <div id="error"></div>
-        </section>
-                    <div class="saved_itinerary_html">Saved Itinerary</div>
-     </section>
     `;
 };
 
