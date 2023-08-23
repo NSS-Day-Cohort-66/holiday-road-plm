@@ -1,5 +1,5 @@
 import { setParkChoice } from "../TransientState.js";
-import { buttonChange } from "../SaveButton.js"
+import { buttonChange } from "../SaveButton.js";
 
 export const renderParks = async () => {
   const response = await fetch(
@@ -24,19 +24,19 @@ const handleParkChoice = (choice) => {
   if (choice.target.id === "parks_dropdown") {
     const selectedOption = choice.target.options[choice.target.selectedIndex];
     const selectedParkName = selectedOption.textContent;
+    const selectedParkLat = selectedOption.dataset.latitude;
     setParkChoice(parseInt(choice.target.value));
-    displaySelectedParkName(selectedParkName);
-    buttonChange()
+    displaySelectedParkName(selectedParkName, selectedParkLat);
+    buttonChange();
   }
 };
 
-export const displaySelectedParkName = (selectedParkName) => {
+export const displaySelectedParkName = (selectedParkName, selectedParkLat) => {
   const itineraryPreviewElement = document.getElementById("park_preview_html");
-  const parkHTML = `${selectedParkName}`
+  const parkHTML = `<div class=selected_park data-latitude="${selectedParkLat}">${selectedParkName}</div>`;
   if (itineraryPreviewElement) {
-    itineraryPreviewElement.textContent = parkHTML;
+    itineraryPreviewElement.innerHTML = parkHTML;
   }
 };
 
 document.addEventListener("change", handleParkChoice);
-
