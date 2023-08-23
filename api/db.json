@@ -1,88 +1,22 @@
 {
   "itineraries": [
     {
-      "parkId": 5,
-      "eateryId": 8,
-      "attractionId": 7,
+      "parkId": 2,
+      "eateryId": 5,
+      "attractionId": 5,
       "id": 1
     },
     {
-      "parkId": 5,
-      "eateryId": 13,
-      "attractionId": 11,
+      "parkId": 3,
+      "eateryId": 3,
+      "attractionId": 4,
       "id": 2
     },
     {
-      "parkId": 6,
-      "eateryId": 12,
-      "attractionId": 6,
-      "id": 3
-    },
-    {
-      "parkId": 4,
-      "eateryId": 8,
-      "attractionId": 8,
-      "id": 4
-    },
-    {
-      "parkId": 3,
-      "eateryId": 10,
-      "attractionId": 7,
-      "id": 5
-    },
-    {
-      "parkId": 14,
-      "eateryId": 9,
-      "attractionId": 6,
-      "id": 6
-    },
-    {
-      "parkId": 3,
-      "eateryId": 5,
-      "attractionId": 5,
-      "id": 7
-    },
-    {
-      "parkId": 3,
-      "eateryId": 5,
-      "attractionId": 4,
-      "id": 8
-    },
-    {
-      "parkId": 9,
-      "eateryId": 4,
-      "attractionId": 3,
-      "id": 9
-    },
-    {
-      "parkId": 4,
-      "eateryId": 5,
-      "attractionId": 4,
-      "id": 10
-    },
-    {
-      "parkId": 3,
-      "eateryId": 2,
-      "attractionId": 2,
-      "id": 11
-    },
-    {
-      "parkId": 5,
-      "eateryId": 5,
-      "attractionId": 4,
-      "id": 12
-    },
-    {
-      "parkId": 5,
-      "eateryId": 10,
-      "attractionId": 5,
-      "id": 13
-    },
-    {
       "parkId": 2,
-      "eateryId": 3,
+      "eateryId": 4,
       "attractionId": 4,
-      "id": 14
+      "id": 3
     }
   ]
 }

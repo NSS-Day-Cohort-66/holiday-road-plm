@@ -11,7 +11,7 @@ import {
 import { displaySelectedParkName } from "./parks/ParkProvider.js";
 import { displaySelectedAttractionName } from "./attractions/AttractionProvider.js";
 import { displaySelectedEateryName } from "./eateries/EateryProvider.js";
-import { ItineraryList, eventsButton } from "./SavedItineraries.js";
+import { ItineraryList, eventsButton2 } from "./SavedItineraries.js";
 
 
 
@@ -24,7 +24,7 @@ export const renderHTML = async () => {
   const attractionSelectionHTML = displaySelectedAttractionName()
   const eaterySelectionHTML = displaySelectedEateryName()
   const itinerariesHTML = ItineraryList()
-  const eventsHTML = await eventsButton()
+  const eventsHTML = eventsButton2()
 
   return `
     <header class="header">
@@ -61,5 +61,6 @@ export const renderHTML = async () => {
             </section>
     </article>
     `;
+
 };
 
