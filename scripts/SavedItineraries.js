@@ -37,9 +37,9 @@ export const ItineraryList = async () => {
 
 
 
-export const eventsButton2 = () => {
-    return `<button class="events_button" id="save_click">Events</button>`
-}
+// export const eventsButton2 = () => {
+//     return `<button class="events_button" id="save_click">Events</button>`
+// }
 
 export const eventsButton = () => {
     const eventsContainer = document.getElementById("event_button")
