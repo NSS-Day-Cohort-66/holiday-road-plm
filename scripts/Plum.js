@@ -12,7 +12,7 @@ import { handleDetailsRender } from "./DetailsButton.js";
 import { displaySelectedParkName } from "./parks/ParkProvider.js";
 import { displaySelectedAttractionName } from "./attractions/AttractionProvider.js";
 import { displaySelectedEateryName } from "./eateries/EateryProvider.js";
-import { ItineraryList } from "./SavedItineraries.js";
+import { ItineraryList, handleEventsButton } from "./SavedItineraries.js";
 
 export const renderHTML = async () => {
   const parksHTML = await renderParks();
@@ -23,6 +23,7 @@ export const renderHTML = async () => {
   const attractionSelectionHTML = displaySelectedAttractionName();
   const eaterySelectionHTML = displaySelectedEateryName();
   const itinerariesHTML = ItineraryList();
+  const eventHTML = handleEventsButton()
 
   return `
     <header class="header">
