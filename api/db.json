@@ -17,6 +17,18 @@
       "eateryId": 4,
       "attractionId": 4,
       "id": 3
+    },
+    {
+      "parkId": 5,
+      "eateryId": 4,
+      "attractionId": 2,
+      "id": 4
+    },
+    {
+      "parkId": 5,
+      "eateryId": 6,
+      "attractionId": 7,
+      "id": 5
     }
   ]
 }

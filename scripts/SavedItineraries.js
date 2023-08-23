@@ -38,44 +38,44 @@ export const ItineraryList = async () => {
 
 
 export const eventsButton2 = () => {
-    return `<button ="events_button" id="save_click">Events</button>`
+    return `<button class="events_button" id="save_click">Events</button>`
 }
 
-// export const eventsButton = () => {
-//     const eventsContainer = document.querySelector(".events_button")
-//     const eventsHTML = `<button class="events_button" id="save_click">Events</button>`
-//     eventsContainer.innerHTML = eventsHTML
-// }
+export const eventsButton = () => {
+    const eventsContainer = document.getElementById("event_button")
+    const eventsHTML = `<button class="events_button" id="save_click">Events</button>`
+    eventsContainer.innerHTML = eventsHTML
+}
 
-const handleEventsButton = async (event) => {
+const handleEventsButton = (event) => {
     if(event.target.id === "save_click") {
-        await fetchEvents(event)
+         fetchEvents(event)
     }
 }
 
 
-// export const fetchEvents = async () => {
-//     const apiKey = "u4HNwSA9HBy4oJIhFrGTQG2Xo9xrlV7mVMfmthTd"
-//     const limit = 2
-//     const apiURL = `https://developer.nps.gov/api/v1/events?limit=${limit}&parkCode=&api_key=${apiKey}`
+export const fetchEvents = async () => {
+    const apiKey = "u4HNwSA9HBy4oJIhFrGTQG2Xo9xrlV7mVMfmthTd"
+    const limit = 2
+    const apiURL = `https://developer.nps.gov/api/v1/events?limit=${limit}&parkCode=&api_key=${apiKey}`
     
-//     const response = await fetch(apiURL)
-//     const eventsResponse = await response.json()
-//     const eventsArray = eventsResponse.data
-//     const eventsContainer = document.querySelector(".event_container")
-//     const eventHTML = eventsArray.map(event => {
-//          `<div class="event">
-//         <h3>${event.title}</h3>
-//         <p>Date: ${event.dateStart}</p>
-//         <p>Time: ${event.timeStart} - ${event.timeEnd}</p>
-//         <p>Description: ${event.description}</p>
-//         <p>Fee Info: ${event.feeInfo}</p>
-//     </div>`.join('')
-//     })
-//     eventsContainer.innerHTML = eventHTML
-// }
+    const response = await fetch(apiURL)
+    const eventsResponse = await response.json()
+    const eventsArray = eventsResponse.data
+    const eventsContainer = document.querySelector(".event_container")
+    const eventHTML = eventsArray.map(event => {
+         `<div class="event">
+        <h3>${event.title}</h3>
+        <p>Date: ${event.dateStart}</p>
+        <p>Time: ${event.timeStart} - ${event.timeEnd}</p>
+        <p>Description: ${event.description}</p>
+        <p>Fee Info: ${event.feeInfo}</p>
+    </div>`.join('')
+    })
+    eventsContainer.innerHTML = eventHTML
+}
 
-// document.addEventListener("click", handleEventsButton)
+document.addEventListener("click", handleEventsButton)
 
 
 
