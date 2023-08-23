@@ -22,7 +22,7 @@ export const renderHTML = async () => {
   const parkSelectionHTML = displaySelectedParkName()
   const attractionSelectionHTML = displaySelectedAttractionName()
   const eaterySelectionHTML = displaySelectedEateryName()
-  const itinerariesHTML = ItineraryList()
+  const itinerariesHTML = await ItineraryList()
 
   return `
     <header class="header">
@@ -57,7 +57,7 @@ export const renderHTML = async () => {
 
             <section class="right_container">
                 <div class="eateries_html">${eateriesHTML}</div>
-                <div id="saved_itinerary_html"></div>
+                <div id="saved_itinerary_html">${itinerariesHTML}</div>
             </section>
     </article>
     `;
