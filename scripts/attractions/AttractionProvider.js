@@ -1,5 +1,5 @@
 import { setAttractionChoice } from "../TransientState.js";
-import { buttonChange } from "../SaveButton.js"
+import { buttonChange } from "../SaveButton.js";
 
 export const renderAttractions = async () => {
   const response = await fetch("http://holidayroad.nss.team/bizarreries");
@@ -18,23 +18,27 @@ export const renderAttractions = async () => {
   return html;
 };
 
-
 const handleAttractionChoice = (choice) => {
   if (choice.target.id === "attractions_dropdown") {
     const selectedOption = choice.target.options[choice.target.selectedIndex];
     const selectedAttractionName = selectedOption.textContent;
+    const selectedOptionId = selectedOption.value;
     setAttractionChoice(parseInt(selectedOption.value));
-    displaySelectedAttractionName(selectedAttractionName);
-    buttonChange()
+    displaySelectedAttractionName(selectedAttractionName, selectedOptionId);
+    buttonChange();
   }
 };
 
-
-export const displaySelectedAttractionName = (selectedAttractionName) => {
-  const itineraryPreviewElement = document.getElementById("attractions_preview_html");
-  const attractionHTML = `${selectedAttractionName}`
+export const displaySelectedAttractionName = (
+  selectedAttractionName,
+  selectedOptionId
+) => {
+  const itineraryPreviewElement = document.getElementById(
+    "attractions_preview_html"
+  );
+  const attractionHTML = `<div class="selected_attractions" data-value="${selectedOptionId}">${selectedAttractionName}<br>`;
   if (itineraryPreviewElement) {
-    itineraryPreviewElement.textContent = attractionHTML;
+    itineraryPreviewElement.innerHTML += attractionHTML;
   }
 };
 
