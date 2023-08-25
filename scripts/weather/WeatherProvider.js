@@ -28,7 +28,7 @@ export const renderWeather = async (latitude, longitude) => {
   let weatherHTML = '';
   const weatherContainer = document.querySelector(".weather_html");
 
-  for (const dayIndex of [0, 7, 15, 23, 31, 39]) {
+  for (const dayIndex of [0, 7, 15, 23, 31]) {
     const temperature = Math.round(weather.list[dayIndex].main.temp);
    
     let textColor = '';
