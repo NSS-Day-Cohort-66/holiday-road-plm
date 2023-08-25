@@ -38,6 +38,7 @@ export const renderHTML = async () => {
                 <div class="weather_header">Weather</div>
                 <div class="weather_html"></div>
             </section>
+
             <section class="middle_container">
                 <div class="attractions_html">${attractionsHTML}</div>
                 <div class="itinerary_preview">Itinerary Preview</div>
@@ -52,7 +53,9 @@ export const renderHTML = async () => {
                 <div class="details"></div>
                 <div class="save_button_html">${saveButtonHTML}</div>
                 <div id="error"></div>
+                <div id="directions_html"></div>
             </section>
+
             <section class="right_container">
                 <div class="eateries_html">${eateriesHTML}</div>
                 <div id="saved_itinerary_html"></div>
