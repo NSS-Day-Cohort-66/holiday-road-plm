@@ -3,26 +3,27 @@ import { renderAttractions } from "./attractions/AttractionProvider.js";
 import { renderEateries } from "./eateries/EateryProvider.js";
 import { SaveButton } from "./SaveButton.js";
 import { renderWeather } from "./weather/WeatherProvider.js";
-import {
-  parksDetailsButton,
-  attractionDetailsButton,
-  eateryDetailsButton,
-} from "./DetailsButton.js";
+// import {
+//   parksDetailsButton,
+//   attractionDetailsButton,
+//   eateryDetailsButton,
+// } from "./DetailsButton.js";
+import { handleDetailsRender } from "./DetailsButton.js";
 import { displaySelectedParkName } from "./parks/ParkProvider.js";
 import { displaySelectedAttractionName } from "./attractions/AttractionProvider.js";
 import { displaySelectedEateryName } from "./eateries/EateryProvider.js";
-import { ItineraryList } from "./SavedItineraries.js";
-
+import { ItineraryList, handleEventsButton } from "./SavedItineraries.js";
 
 export const renderHTML = async () => {
   const parksHTML = await renderParks();
   const attractionsHTML = await renderAttractions();
   const eateriesHTML = await renderEateries();
   const saveButtonHTML = await SaveButton();
-  const parkSelectionHTML = displaySelectedParkName()
-  const attractionSelectionHTML = displaySelectedAttractionName()
-  const eaterySelectionHTML = displaySelectedEateryName()
-  const itinerariesHTML = await ItineraryList()
+  const parkSelectionHTML = displaySelectedParkName();
+  const attractionSelectionHTML = displaySelectedAttractionName();
+  const eaterySelectionHTML = displaySelectedEateryName();
+  const itinerariesHTML = ItineraryList();
+  const eventHTML = handleEventsButton()
 
   return `
     <header class="header">
@@ -42,13 +43,13 @@ export const renderHTML = async () => {
                 <div class="attractions_html">${attractionsHTML}</div>
                 <div class="itinerary_preview">Itinerary Preview</div>
                 <article class="details_button_html">
-                    <div id="park_preview_html"></div>
-                    <div class="park_details"></div>
-                    <div id="attractions_preview_html"></div>
-                    <div class="attraction_details"></div>
-                    <div id="eateries_preview_html"></div>
-                    <div class="eateries_details"></div>
-                </article>
+                <h3>Park:</h3>
+                <div id="park_preview_html"></div>
+                <h3>Attractions:</h3>
+                <div id="attractions_preview_html"></div>
+                <h3>Eateries:</h3>
+                <div id="eateries_preview_html"></div>
+                
                 <div class="details"></div>
                 <div class="save_button_html">${saveButtonHTML}</div>
                 <div id="error"></div>
@@ -57,10 +58,11 @@ export const renderHTML = async () => {
 
             <section class="right_container">
                 <div class="eateries_html">${eateriesHTML}</div>
-                <div id="saved_itinerary_html">${itinerariesHTML}</div>
-                <div id="itinerary_error"></div>
+                <div id="saved_itinerary_html"></div>
+                <div id="event_button"></div>
+                <div id="event_container"></div>
             </section>
     </article>
     `;
-};
 
+};
