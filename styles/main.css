@@ -12,6 +12,10 @@
   text-align: center;
 }
 
+h2 {
+  font-weight: normal;
+}
+
 body {
   background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/upwk61824402-wikimedia-image.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=6febcfa89566b77064be13aebe5b9a73");
   background-size: cover;
@@ -50,11 +54,19 @@ body {
   width: 700px;
 }
 
+.left_container {
+  width: 28.5%;
+}
+
+.right_container {
+  width: 28.5%;
+}
+
 .weather_html,
 .itinerary_preview,
 #saved_itinerary_html,
 .weather_header {
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .attractions_html,
@@ -73,10 +85,13 @@ body {
   flex-wrap: wrap;
 }
 
-.left_container {
-  width: 28.5%;
-}
+.event {
+  border: 1px solid rgb(210, 145, 66);
+  border-radius: 10px;
+  background-color: #e08438;
+  box-shadow: rgba(255, 46, 46, 0.721) 0px 30px 60px -12px inset, rgba(255, 224, 67, 0.886) 0px 18px 36px -18px inset;
 
+}
 
 .weather_day_ {
   /* display: block; */
@@ -127,12 +142,12 @@ body {
   font-family: "Patagonia";
 }
 
-#saved_itinerary_html {
+#saved_itinerary_html, .event {
   font-family: "Patagonia";
   text-align: left;
 }
 
-.saved_itineraries {
+.saved_itineraries, .event {
   font-family: "Patagonia";
   flex: 1;
   padding: 10px;
@@ -206,9 +221,13 @@ body {
 
 .selected_park,
 .selected_eatery,
-.selected_attractions {
+.selected_attractions, #park_saved {
   cursor: pointer;
   transition: font-size 0.2s ease-in-out;
+}
+
+#park_saved:hover {
+  font-size: 20px;
 }
 
 .selected_park:hover {
