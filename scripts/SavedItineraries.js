@@ -50,7 +50,7 @@ export const ItineraryList = async () => {
 
         tripsHTML += `<ul class='saved_itineraries'>
                     <li>
-                    Park: ${parkName}<br>
+                    <div id="park_saved" data-fullname="${parkName}">Park: ${parkName}<br></div>
                     Food: ${foodName}<br>
                     Attraction: ${attName}<br><br>
                     <button id="directions"
