@@ -60,8 +60,8 @@ export const ItineraryList = async () => {
                     </li>
                     </ul>`
     }
-    // const itineraryList = document.getElementById("saved_itinerary_html");
-    // itineraryList.innerHTML = tripsHTML;
+    const itineraryList = document.getElementById("saved_itinerary_html");
+    itineraryList.innerHTML = tripsHTML;
     return tripsHTML
 }
 
