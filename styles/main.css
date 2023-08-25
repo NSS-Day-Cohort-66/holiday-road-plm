@@ -105,8 +105,13 @@ body {
   text-align: center;
   border-radius: 10px;
   font-family: 'Patagonia';
-  background-color: #e08438;
-  box-shadow: rgba(255, 46, 46, 0.721) 0px 30px 60px -12px inset, rgba(255, 224, 67, 0.886) 0px 18px 36px -18px inset;
+  background-image: linear-gradient(
+    45deg,
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+  
 }
 
 .weather_icon  {
