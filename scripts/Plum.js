@@ -52,12 +52,13 @@ export const renderHTML = async () => {
                 <div class="details"></div>
                 <div class="save_button_html">${saveButtonHTML}</div>
                 <div id="error"></div>
-                <div id="directions"></div>
+                <div id="directions_html"></div>
             </section>
 
             <section class="right_container">
                 <div class="eateries_html">${eateriesHTML}</div>
                 <div id="saved_itinerary_html">${itinerariesHTML}</div>
+                <div id="itinerary_error"></div>
             </section>
     </article>
     `;

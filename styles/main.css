@@ -121,7 +121,11 @@ color: #e08438;
     color: red;
 }
 
-#parkDetailsButton, #attractionDetailsButton, #eateryDetailsButton, .directions_button {
+#itinerary_error {
+  color: red;
+}
+
+#parkDetailsButton, #attractionDetailsButton, #eateryDetailsButton, #directions {
   
   font-family: 'Patagonia';
   margin: 10px;
@@ -142,14 +146,14 @@ color: #e08438;
   touch-action: manipulation;
 }
 
-#parkDetailsButton:hover, #attractionDetailsButton:hover, #eateryDetailsButton:hover, .directions_button:hover {
+#parkDetailsButton:hover, #attractionDetailsButton:hover, #eateryDetailsButton:hover, #directions:hover {
   background-position: right center;
   /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
 }
 
-#parkDetailsButton:active, #attractionDetailsButton:active, #eateryDetailsButton:active, .directions_button:active {
+#parkDetailsButton:active, #attractionDetailsButton:active, #eateryDetailsButton:active, #directions:active {
   transform: scale(0.95);
 }
 
