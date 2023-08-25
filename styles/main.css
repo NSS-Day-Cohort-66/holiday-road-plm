@@ -68,27 +68,47 @@ body {
   font-size: 25px;
 }
 
-.weather_day_0,
-.weather_day_1,
-.weather_day_2,
-.weather_day_3,
-.weather_day_4 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 250px;
-  height: 220px;
-  border: 1px solid rgb(255, 255, 255);
+.weather_html {
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.left_container {
+  width: 28.5%;
+}
+
+
+.weather_day_ {
+  /* display: block; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 2px;
+  width: 225px;
+  height: 210px; 
+  border: 1px solid rgb(210, 145, 66);
   margin-bottom: 5px;
   text-align: center;
   border-radius: 10px;
-  font-family: "Patagonia";
+  font-family: 'Patagonia';
+  background-color: #e08438;
+  box-shadow: rgba(255, 46, 46, 0.721) 0px 30px 60px -12px inset, rgba(255, 224, 67, 0.886) 0px 18px 36px -18px inset;
 }
 
-.weather_icon {
-  width: 50px;
-  height: 50px;
-  margin-top: 5px;
+.weather_icon  {
+  width: 68px;
+  height: 68px; 
+}
+
+.weather_small {
+  font-size: 14px;
+}
+
+.weather_forecast {
+  font-size: 40px;
+  margin: 3px;}
+
+.weather_date {
+  margin-top: -12px;
 }
 
 .itinerary_preview {
@@ -200,3 +220,9 @@ body {
 .selected_eatery:hover {
   font-size: 30px;
 }
+
+font-family: 'Patagonia';
+  background-color: #e08438;
+  border-radius: 5px;
+
+
